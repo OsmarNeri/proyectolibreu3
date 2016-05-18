@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<title>Login</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<SCRIPT LANGUAGE="JavaScript"> 
+		function Login(){ 
+		var done=0; 
+		var username=document.login.username.value; 
+		username=username.toLowerCase(); 
+		var password=document.login.password.value; 
+		password=password.toLowerCase(); 
+		if (username=="usuario" && password=="contraseña") { window.location="logueado.html"; done=1; }
+		if (done==0) { window.location="index.html"; } 
+		} 
+	</SCRIPT> 
+	<body class="landing">
+	<div id="page-wrapper">
+	<section id="banner">
+		<h1>Alpha</h1>
+		<h2><a href="index.html">Proyecto</a> Libre</h2>
+		<form name=login>
+		Usuario: <input type=text name=username> 
+		Contrase&ntilde;a: <input type=password name=password> 
+		<input type=button value="Entrar" onClick="Login()" class="button special">
+		</form>
+	</section>
+	</div>
+	</body>
+</html>
